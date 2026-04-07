@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "A file was just edited. The tool input was: $ARGUMENTS. If the file_path contains '/sources/' or '\\sources\\' and ends with '.md', remind Claude to run 'npm run convert' in the town-charter project directory (c:\\Users\\scott\\Dev\\Andover\\town-charter)."
+          }
+        ]
+      }
+    ]
+  }
+}
